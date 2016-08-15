@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="package_name">com.pocket.chef</string>
+    <string name="app_name">Pocket Chef</string>
+    <string name="action_settings">Settings</string>
+    <string name="breakfast">petit déjeuner</string>
+    <string name="lunch">déjeuner</string>
+    <string name="dinner">dîner</string>
+    <string name="search">recherche</string>
+    <string name="favourites">Favourites</string>
+    <string name="favourite">favori</string>
+    <string name="recipes">Recipe</string>
+    <string name="recipe">recette</string>
+    <string name="back">arrière</string>
+    <string name="start">début</string>
+    <string name="title_activity_categories">CategoriesActivity</string>
+    <string name="title_activity_tabs">Tabs</string>
+    <string name="save">Enregistrer</string>
+    <string name="edit">éditer</string>
+    <string name="done">fini</string>
+    <string name="remove">supprimer</string>
+    <string name="emptyList">Aucune recette</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_view_recipe">ViewRecipeActivity</string>
+    <string name="title_activity_edit">EditActivity</string>
+    
+    <string name="title_tab1">recipe</string>
+    <string name="title_tab2">favourite</string>
+    <string name="title_tab3">search</string>
+        
+    <string name="red">rouge</string>  
+    <string name="gray">gris</string>
+    <string name="blue">bleu</string>
+    
+    <string name="launching">Lancement de web</string>
+    <string name ="unable">Impossible d`enregistrer la recette</string>
+    <string name = "launching_local">Lancement du local</string>
+    <string name="please_save">Se il vous plaît enregistrer votre première recette</string>
+    
+    <string name="dinnerRssFeed">http://www.recette-olives.fr/trans/flux-rss-recettes-croc-frais.xml</string>
+    <string name="lunchRssFeed">http://www.recette-olives.fr/trans/flux-rss-recettes-croc-frais.xml</string>
+    <string name="breakfastRssFeed">http://www.recette-olives.fr/trans/flux-rss-recettes-croc-frais.xml</string>
+    
+    <string name="old_fashioned_pancakes">Démodé crêpes</string>
+    <string name="old_fashioned_pancakes_c">http://www.food.com/recipe/pancakes-25690</string>
+				
+    <string name="caramelized_chicken_wings">Ailes de poulet caramélisées</string>
+    <string name="caramelized_chicken_wings_c">http://www.food.com/recipe/caramelized-chicken-wings-44888</string>
+				
+    <string name="salisbury_steak_with_mushroom_gravy">Salisbury Steak avec sauce aux champignons</string>
+    <string name="salisbury_steak_with_mushroom_gravy_c">http://www.myrecipes.com/recipe/salisbury-steak-with-gravy-50400000108352/</string>
+    
+    
+</resources>

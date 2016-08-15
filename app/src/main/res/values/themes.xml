@@ -1,0 +1,18 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+   
+    <style name="Tab.Red" parent="@android:style/Widget.Holo.ActionBar.TabView">
+       <item name="android:background">@color/red</item> 
+       <item name="android:alpha">0.5</item> 
+    </style>
+
+    <style name="ActionBarBlack" parent="@android:style/Widget.ActionBar">
+        <item name="android:background">@color/black</item>
+    </style>
+    
+    <style name="TabBlack" parent="@android:style/Widget.Holo.ActionBar.TabView">
+       <item name="android:background">@color/black</item> 
+       <item name="android:alpha">0.5</item> 
+    </style>
+      
+      
+</resources>

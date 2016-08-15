@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="breakfastsources">
+        <item>http://feeds.feedburner.com/SimplyRecipesLowCarb</item>   
+        <item>http://feeds.tasteofhome.com/taste-of-home/breakfast-brunch-recipes/</item>  
+    </string-array>
+    
+    <string-array
+        name="lunchsources">
+        <item>http://feeds.feedburner.com/elise/simplyrecipes</item>    
+        <item>http://feeds.tasteofhome.com/taste-of-home/sandwich-recipes/</item> 
+    </string-array>
+    
+    <string-array
+        name="dinnersources">
+        <item>http://feeds.feedburner.com/DinnerTonight?format=xml</item>
+        <item>http://feeds.tasteofhome.com/taste-of-home/soup-recipes/</item> 
+        <item>http://feeds.tasteofhome.com/taste-of-home/main-dish-recipes/</item> 
+        <item>http://feeds.feedburner.com/eatingwell_make_it_tonight?format=xml</item>   
+    </string-array>
+    
+    <string-array
+        name="options">
+        <item>Browse New Recipest</item>
+        <item>Home</item>   
+    </string-array>
+    
+</resources>
