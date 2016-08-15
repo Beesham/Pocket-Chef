@@ -66,11 +66,14 @@ public class CategoriesActivity extends FragmentActivity implements ActionBar.On
 		if (id == R.id.action_settings) {
 			return true;
 		}
-		
+
 		switch (item.getItemId()) {			
 		case android.R.id.home:
 			return true;
-		default:
+			case(R.id.action_search_new_recipes):
+				//TODO
+				return true;
+			default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
@@ -207,7 +210,7 @@ public class CategoriesActivity extends FragmentActivity implements ActionBar.On
 	private void setupActionBar(){
 		actionBar = getActionBar();
 		actionBar.show();
-		actionBar.setDisplayShowTitleEnabled(false);
+		actionBar.setDisplayShowTitleEnabled(true);
 	}
 	    
 	
