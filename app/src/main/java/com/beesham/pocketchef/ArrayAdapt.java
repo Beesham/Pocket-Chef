@@ -32,7 +32,7 @@ public class ArrayAdapt extends ArrayAdapter<Recipes> {
 
 	static class ViewHolder{
 		TextView textTitle;
-		TextView textDes;
+		//TextView textDes;
 		ImageView img;
 		int position;
 	}
@@ -48,7 +48,7 @@ public class ArrayAdapt extends ArrayAdapter<Recipes> {
 			viewHolder = new ViewHolder();
 			viewHolder.img = (ImageView) convertView.findViewById(R.id.imageView1);		
 			viewHolder.textTitle = (TextView) convertView.findViewById(R.id.title);
-			viewHolder.textDes = (TextView) convertView.findViewById(R.id.des);
+			//viewHolder.textDes = (TextView) convertView.findViewById(R.id.des);
 			viewHolder.position = position;
 			convertView.setTag(viewHolder);
 		}else {
@@ -61,9 +61,9 @@ public class ArrayAdapt extends ArrayAdapter<Recipes> {
 			//ImageView img = (ImageView) convertView.findViewById(R.id.imageView1);
 			
 			viewHolder.textTitle.setText(Rec.getTitle());
-			viewHolder.textDes.setText(Rec.getDescription());
+			//viewHolder.textDes.setText(Rec.getDescription());
 			viewHolder.textTitle.setText(Rec.getTitle());
-			viewHolder.textDes.setText(Rec.getDescription());
+			//viewHolder.textDes.setText(Rec.getDescription());
 			if(Rec.getImg()==null){
 				viewHolder.img.setImageDrawable((Drawable)context.getApplicationContext().getResources().getDrawable(R.drawable.ic_launcher));
 			}

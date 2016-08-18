@@ -18,6 +18,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -35,6 +37,7 @@ public class BrowseNewRecipesFragment extends Fragment {
 	ListView list;
 	ProgressBar mProgressBar;
 	Context context;
+	private ArrayAdapt adapt;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,7 +57,7 @@ public class BrowseNewRecipesFragment extends Fragment {
 
 			getRecipes();
 
-			ArrayAdapt adapt = new ArrayAdapt(getActivity(),R.layout.customlist, recipesL);
+			adapt = new ArrayAdapt(getActivity(),R.layout.customlist, recipesL);
 
 			list.setAdapter(adapt);
 			adapt.notifyDataSetChanged();
@@ -118,7 +121,7 @@ public class BrowseNewRecipesFragment extends Fragment {
 
 		return rootView;		
 	}
-	
+
 	public void showSelectedRecipe(){
 		FragmentManager fragmentManager = getFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -147,8 +150,7 @@ public class BrowseNewRecipesFragment extends Fragment {
 			new RssFeed().execute(recipesSources[i]);
 		}
 	}
-	
-	
+
 	private class RssFeed extends AsyncTask<String, Integer,ArrayList<Recipes>> {
 		// Declaring a Recipe object
 		ArrayList<Recipes> list = new ArrayList<Recipes>();
@@ -274,6 +276,7 @@ public class BrowseNewRecipesFragment extends Fragment {
 		protected void onPostExecute(ArrayList<Recipes> recipes) {
 			mProgressBar.setVisibility(View.GONE);
 			recipesL.addAll(recipes);
+			adapt.notifyDataSetChanged();
 		}
 		 
 		protected void onPreExecute(){

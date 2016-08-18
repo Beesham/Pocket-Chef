@@ -34,7 +34,7 @@ public class CategoriesActivity extends FragmentActivity implements ActionBar.On
 
 	private ActionBar actionBar ;
 	
-	private DrawerLayout mDrawerLayout;
+	//private DrawerLayout mDrawerLayout;
 	private String[] drawerOptions;
 	private ListView drawerOptionsLV;
 	private ActionBarDrawerToggle mActionBarToggle;
@@ -47,7 +47,7 @@ public class CategoriesActivity extends FragmentActivity implements ActionBar.On
 				
 		setupActionBar();
 		setupViewPager();
-		setupDrawer();
+		//setupDrawer();
 	}
 
 	@Override
@@ -71,7 +71,8 @@ public class CategoriesActivity extends FragmentActivity implements ActionBar.On
 		case android.R.id.home:
 			return true;
 			case(R.id.action_search_new_recipes):
-				//TODO
+				Intent i = new Intent(this,BrowseNewRecipesActivity.class);
+				startActivity(i);
 				return true;
 			default:
 			return super.onOptionsItemSelected(item);
@@ -82,7 +83,7 @@ public class CategoriesActivity extends FragmentActivity implements ActionBar.On
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
-        mActionBarToggle.syncState();
+        //mActionBarToggle.syncState();
     }
 
     @Override
@@ -179,33 +180,33 @@ public class CategoriesActivity extends FragmentActivity implements ActionBar.On
 	    		.setTabListener((android.app.ActionBar.TabListener) tabListener));
 	}
 		
-	private void setupDrawer(){
-		
-		drawerOptions = getResources().getStringArray(R.array.options);
-		mDrawerLayout = (DrawerLayout) findViewById(R.id.categories_layout);
-		drawerOptionsLV = (ListView) findViewById(R.id.left_drawer);
-		
-		// ActionBarDrawerToggle ties together the proper interactions
-        // between the sliding drawer and the action bar app icon
-		mActionBarToggle = new ActionBarDrawerToggle(
-                this,                  /* host Activity */
-                mDrawerLayout,         /* DrawerLayout object */
-                R.drawable.ic_launcher,  /* nav drawer image to replace 'Up' caret */
-                R.string.drawer_open,  /* "open drawer" description for accessibility */
-                R.string.drawer_close  /* "close drawer" description for accessibility */
-                ) {
-            public void onDrawerClosed(View view) {
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-
-            public void onDrawerOpened(View drawerView) {
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-        };
-        mDrawerLayout.setDrawerListener(mActionBarToggle);
-        drawerOptionsLV.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item,drawerOptions));
-		drawerOptionsLV.setOnItemClickListener(new DrawerItemClickListener());
-	}
+//	private void setupDrawer(){
+//
+//		drawerOptions = getResources().getStringArray(R.array.options);
+//		mDrawerLayout = (DrawerLayout) findViewById(R.id.categories_layout);
+//		drawerOptionsLV = (ListView) findViewById(R.id.left_drawer);
+//
+//		// ActionBarDrawerToggle ties together the proper interactions
+//        // between the sliding drawer and the action bar app icon
+//		mActionBarToggle = new ActionBarDrawerToggle(
+//                this,                  /* host Activity */
+//                mDrawerLayout,         /* DrawerLayout object */
+//                R.drawable.ic_launcher,  /* nav drawer image to replace 'Up' caret */
+//                R.string.drawer_open,  /* "open drawer" description for accessibility */
+//                R.string.drawer_close  /* "close drawer" description for accessibility */
+//                ) {
+//            public void onDrawerClosed(View view) {
+//                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+//            }
+//
+//            public void onDrawerOpened(View drawerView) {
+//                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+//            }
+//        };
+//        mDrawerLayout.setDrawerListener(mActionBarToggle);
+//        drawerOptionsLV.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item,drawerOptions));
+//		drawerOptionsLV.setOnItemClickListener(new DrawerItemClickListener());
+//	}
 	
 	private void setupActionBar(){
 		actionBar = getActionBar();
@@ -213,11 +214,7 @@ public class CategoriesActivity extends FragmentActivity implements ActionBar.On
 		actionBar.setDisplayShowTitleEnabled(true);
 	}
 	    
-	
-	/**
-	* A simple pager adapter that represents the {@link ScreenSlidePageFragment} objects, in
-	* sequence.
-	*/
+
 	private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
 		public ScreenSlidePagerAdapter(android.support.v4.app.FragmentManager fragmentManager) {
 			super(fragmentManager);
@@ -245,29 +242,29 @@ public class CategoriesActivity extends FragmentActivity implements ActionBar.On
 		}
 	}
 	
-	/* The click listener for ListView in the navigation drawer */
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
-        }
-    }
-       
-    private void selectItem(int position) {
-    	Intent i;
-    	switch(position){
-    	case 0:
-    			i = new Intent(this,BrowseNewRecipesActivity.class);
-    			startActivity(i);
-    		break;
-    	case 1:
-    		break;
-    	}
-    	
-        // update selected item and title, then close the drawer
-        drawerOptionsLV.setItemChecked(position, true);
-        setTitle(drawerOptions[position]);
-        mDrawerLayout.closeDrawer(drawerOptionsLV);
-    }
+//	/* The click listener for ListView in the navigation drawer */
+//    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+//        @Override
+//        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//            selectItem(position);
+//        }
+//    }
+//
+//    private void selectItem(int position) {
+//    	Intent i;
+//    	switch(position){
+//    	case 0:
+//    			i = new Intent(this,BrowseNewRecipesActivity.class);
+//    			startActivity(i);
+//    		break;
+//    	case 1:
+//    		break;
+//    	}
+//
+//        // update selected item and title, then close the drawer
+//        drawerOptionsLV.setItemChecked(position, true);
+//        setTitle(drawerOptions[position]);
+//        mDrawerLayout.closeDrawer(drawerOptionsLV);
+//    }
 
 }//end of class

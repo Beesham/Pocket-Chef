@@ -1,17 +1,12 @@
 package com.beesham.pocketchef;
 import java.util.List;
 
-import com.beesham.pocketchef.R;
-import com.beesham.pocketchef.R.id;
-import com.beesham.pocketchef.R.layout;
-
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-//import com.workout.logger.free.R;
 
 public class myArrayAdapterSwipeToDismiss extends ArrayAdapter<String> {
 	

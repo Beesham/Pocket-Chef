@@ -4,6 +4,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.Menu;
 
 
 public class ViewRecipeActivity extends FragmentActivity{
@@ -23,6 +24,4 @@ public class ViewRecipeActivity extends FragmentActivity{
 		mFragmentTransaction.commit();
 	}
 
-	
-	
 }

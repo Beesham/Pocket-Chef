@@ -6,25 +6,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
-import android.content.res.Configuration;
 import android.database.SQLException;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.PopupMenu;
-import android.widget.Toast;
+
 
 public class HomeActivity extends Activity {
 
@@ -81,12 +73,9 @@ public class HomeActivity extends Activity {
  
             @Override
             public void run() {
-                // This method will be executed once the timer is over
-                // Start your app main activity
-                Intent i = new Intent(HomeActivity.this, CategoriesActivity.class);
+                 Intent i = new Intent(HomeActivity.this, CategoriesActivity.class);
                 startActivity(i);
  
-                // close this activity
                 finish();
             }
         }, SPLASH_TIME_OUT);
@@ -105,9 +94,6 @@ public class HomeActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
