@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.util;
 import android.content.Context;
 import android.content.res.Configuration;
 

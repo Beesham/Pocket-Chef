@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.util;
 import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;

@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.util;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -12,6 +12,8 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+
+import com.beesham.pocketchef.R;
 
 public class ImageDownload extends AsyncTask <Void, Void, Bitmap> {
 	

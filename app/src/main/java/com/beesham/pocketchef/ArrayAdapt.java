@@ -1,7 +1,8 @@
 package com.beesham.pocketchef;
 import java.util.ArrayList;
 
-import com.beesham.pocketchef.image.loader.ImageLoader;
+import com.beesham.pocketchef.util.loader.ImageLoader;
+import com.beesham.pocketchef.model.Recipes;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

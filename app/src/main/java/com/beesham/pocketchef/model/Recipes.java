@@ -1,9 +1,9 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.model;
 public class Recipes {
-	String title = null;
-	String description = null;
-	String link = null;
-	String img = null;
+	public String title = null;
+	public String description = null;
+	public String link = null;
+	public String img = null;
 	
 	public Recipes (String t, String d, String l,String i){
 		title = t;

@@ -2,14 +2,11 @@ package com.beesham.pocketchef;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.database.SQLException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +16,8 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.beesham.pocketchef.data.MySQLiteHelper;
 
 public class ViewRecipeFragment extends Fragment implements ActionBar.OnNavigationListener  {
 

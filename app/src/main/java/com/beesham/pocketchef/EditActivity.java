@@ -5,15 +5,14 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.SQLException;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ListView;
+
+import com.beesham.pocketchef.data.MySQLiteHelper;
 
 public class EditActivity extends Activity implements ActionBar.OnNavigationListener {
 

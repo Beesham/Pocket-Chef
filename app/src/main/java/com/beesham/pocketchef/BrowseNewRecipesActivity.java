@@ -8,9 +8,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.widget.ListView;
+
+import com.beesham.pocketchef.model.Recipes;
 
 public class BrowseNewRecipesActivity extends FragmentActivity {
 	Bundle bundle;	

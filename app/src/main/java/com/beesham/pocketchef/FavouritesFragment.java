@@ -1,6 +1,7 @@
 package com.beesham.pocketchef;
 import java.util.ArrayList;
 
+import com.beesham.pocketchef.data.MySQLiteHelper;
 import com.hudomju.swipe.SwipeToDismissTouchListener;
 import com.hudomju.swipe.adapter.ListViewAdapter;
 

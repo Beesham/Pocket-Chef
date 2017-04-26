@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.data;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -9,6 +9,8 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
+
+import com.beesham.pocketchef.model.Recipes;
 
 public class RssFeed extends AsyncTask<String, Integer,ArrayList<Recipes>> {
 	// Declaring a Recipe object

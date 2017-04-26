@@ -1,4 +1,4 @@
-package com.beesham.pocketchef.image.loader;
+package com.beesham.pocketchef.util.loader;
 
 import java.io.File;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.data;
 
 import java.io.FileInputStream;
 import java.io.IOException;
