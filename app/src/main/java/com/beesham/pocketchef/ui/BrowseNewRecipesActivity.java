@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 
 import java.util.ArrayList;
 import android.app.FragmentManager;
@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.widget.ListView;
 
+import com.beesham.pocketchef.R;
 import com.beesham.pocketchef.model.Recipes;
 
 public class BrowseNewRecipesActivity extends FragmentActivity {

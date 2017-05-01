@@ -1,6 +1,7 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 import java.util.ArrayList;
 
+import com.beesham.pocketchef.R;
 import com.beesham.pocketchef.data.MySQLiteHelper;
 import com.hudomju.swipe.SwipeToDismissTouchListener;
 import com.hudomju.swipe.adapter.ListViewAdapter;
@@ -18,7 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-public class LunchRecipesFragment extends Fragment {
+public class DinnerRecipesFragment extends Fragment {
 
 	private MySQLiteHelper db;
 	ArrayAdapter<String> adapter=null;
@@ -31,16 +32,16 @@ public class LunchRecipesFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-			
 		View rootView = inflater.inflate(R.layout.fragment_recipes, container, false);
 		
-		bundle = new Bundle();	
+		bundle = new Bundle();		
+
 		db = new MySQLiteHelper(context);
 		recipeList = (ListView) rootView.findViewById(R.id.mylist);
 		
 		try {
 			db.openDataBaseRead();
-			recipesAL = db.getRecipeName("2");
+			recipesAL = db.getRecipeName("3");
 		}catch(SQLException sqle){
 			sqle.printStackTrace();}
 		finally{db.closedb();}

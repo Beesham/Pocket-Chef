@@ -1,10 +1,10 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 import java.util.ArrayList;
 
+import com.beesham.pocketchef.R;
 import com.beesham.pocketchef.data.MySQLiteHelper;
 import com.hudomju.swipe.SwipeToDismissTouchListener;
 import com.hudomju.swipe.adapter.ListViewAdapter;
-
 import android.content.Context;
 import android.content.Intent;
 import android.database.SQLException;
@@ -19,7 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-public class BreakfastRecipesFragment extends Fragment {
+public class LunchRecipesFragment extends Fragment {
 
 	private MySQLiteHelper db;
 	ArrayAdapter<String> adapter=null;
@@ -32,13 +32,20 @@ public class BreakfastRecipesFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+			
 		View rootView = inflater.inflate(R.layout.fragment_recipes, container, false);
 		
-		bundle = new Bundle();			
+		bundle = new Bundle();	
 		db = new MySQLiteHelper(context);
 		recipeList = (ListView) rootView.findViewById(R.id.mylist);
-		populateRecipeList();
-				
+		
+		try {
+			db.openDataBaseRead();
+			recipesAL = db.getRecipeName("2");
+		}catch(SQLException sqle){
+			sqle.printStackTrace();}
+		finally{db.closedb();}
+		
 		final myArrayAdapterSwipeToDismiss adapter = new myArrayAdapterSwipeToDismiss(getActivity(), recipesAL);
 		
 		if(recipesAL.isEmpty()){
@@ -50,7 +57,7 @@ public class BreakfastRecipesFragment extends Fragment {
 		    adapter.notifyDataSetChanged();
 		}
 		
-		final SwipeToDismissTouchListener<ListViewAdapter> touchListener =
+		 final SwipeToDismissTouchListener<ListViewAdapter> touchListener =
 	                new SwipeToDismissTouchListener<ListViewAdapter>(
 	                        new ListViewAdapter(recipeList),
 	                        new SwipeToDismissTouchListener.DismissCallbacks<ListViewAdapter>() {
@@ -85,15 +92,6 @@ public class BreakfastRecipesFragment extends Fragment {
 	                });
 		
 		return rootView;
-	}
-	
-	private void populateRecipeList(){
-		try {
-			db.openDataBaseRead();
-			recipesAL = db.getRecipeName("1");
-		}catch(SQLException sqle){
-			sqle.printStackTrace();}
-		finally{db.closedb();}
 	}
 	
 	//removes recipe from database

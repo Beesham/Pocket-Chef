@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 import java.util.ArrayList;
 
 import android.app.ActionBar;
@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import com.beesham.pocketchef.R;
 import com.beesham.pocketchef.data.MySQLiteHelper;
 
 public class EditActivity extends Activity implements ActionBar.OnNavigationListener {

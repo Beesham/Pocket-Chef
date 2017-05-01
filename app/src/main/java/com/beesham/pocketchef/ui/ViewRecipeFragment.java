@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.content.Context;
@@ -17,6 +17,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.beesham.pocketchef.R;
 import com.beesham.pocketchef.data.MySQLiteHelper;
 
 public class ViewRecipeFragment extends Fragment implements ActionBar.OnNavigationListener  {

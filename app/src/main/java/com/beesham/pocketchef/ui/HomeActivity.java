@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.beesham.pocketchef.R;
 import com.beesham.pocketchef.data.MySQLiteHelper;
 
 

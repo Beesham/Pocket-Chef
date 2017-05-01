@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+
+import com.beesham.pocketchef.R;
 
 public class TitleNavigationAdapter extends BaseAdapter {
 

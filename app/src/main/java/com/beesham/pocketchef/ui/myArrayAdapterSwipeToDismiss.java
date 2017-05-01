@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 import java.util.List;
 
 import android.app.Activity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.beesham.pocketchef.R;
 
 public class myArrayAdapterSwipeToDismiss extends ArrayAdapter<String> {
 	

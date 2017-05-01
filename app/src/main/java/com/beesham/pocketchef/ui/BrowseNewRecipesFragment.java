@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -27,6 +27,7 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ProgressBar;
 
+import com.beesham.pocketchef.R;
 import com.beesham.pocketchef.model.Recipes;
 
 public class BrowseNewRecipesFragment extends Fragment {
@@ -218,7 +219,7 @@ public class BrowseNewRecipesFragment extends Fragment {
 													Temp = Temp.substring(0, Temp.indexOf('"'));
 													img = Temp;
 													Log.d("Found img",img);
-													recipes.setImg(img);
+													recipes.setImage(img);
 												}
 											}
 											

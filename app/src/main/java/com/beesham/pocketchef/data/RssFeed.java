@@ -83,7 +83,7 @@ public class RssFeed extends AsyncTask<String, Integer,ArrayList<Recipes>> {
 												Temp = Temp.substring(0, Temp.indexOf('"'));
 												img = Temp;
 												Log.d("Found img",img);
-												recipes.setImg(img);
+												recipes.setImage(img);
 											}
 										}
 										

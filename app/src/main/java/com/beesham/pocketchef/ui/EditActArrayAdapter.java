@@ -1,4 +1,4 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 import java.util.ArrayList;
 import java.util.List;
 import android.app.Activity;
@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+
+import com.beesham.pocketchef.R;
 
 
 public class EditActArrayAdapter extends ArrayAdapter<String> {

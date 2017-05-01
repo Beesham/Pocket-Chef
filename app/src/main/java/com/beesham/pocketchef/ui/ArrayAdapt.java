@@ -1,6 +1,7 @@
-package com.beesham.pocketchef;
+package com.beesham.pocketchef.ui;
 import java.util.ArrayList;
 
+import com.beesham.pocketchef.R;
 import com.beesham.pocketchef.util.loader.ImageLoader;
 import com.beesham.pocketchef.model.Recipes;
 
@@ -65,11 +66,11 @@ public class ArrayAdapt extends ArrayAdapter<Recipes> {
 			//viewHolder.textDes.setText(Rec.getDescription());
 			viewHolder.textTitle.setText(Rec.getTitle());
 			//viewHolder.textDes.setText(Rec.getDescription());
-			if(Rec.getImg()==null){
+			if(Rec.getImage()==null){
 				viewHolder.img.setImageDrawable((Drawable)context.getApplicationContext().getResources().getDrawable(R.drawable.ic_launcher));
 			}
-			//else new ImageDownload(Rec.getImg(), convertView).execute();
-			else new ImageLoader(context).DisplayImage(Rec.getImg(), viewHolder.img);
+			//else new ImageDownload(Rec.getImage(), convertView).execute();
+			else new ImageLoader(context).DisplayImage(Rec.getImage(), viewHolder.img);
 		}
 		return convertView;
 	}
