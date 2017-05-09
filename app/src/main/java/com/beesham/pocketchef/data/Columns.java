@@ -34,6 +34,9 @@ public class Columns {
         @DataType(DataType.Type.TEXT)
         @NotNull
         public static final String INGREDIENTS = "ingredients";
+        @DataType(DataType.Type.INTEGER)
+        @NotNull
+        public static final String CATEGORY = "category";
     }
 
     public static class SearchedRecipesColumn{
@@ -53,6 +56,9 @@ public class Columns {
         @DataType(DataType.Type.TEXT)
         @NotNull
         public static final String PREP_TIME = "prep_time";
+        @DataType(DataType.Type.INTEGER)
+        @NotNull
+        public static final String CATEGORY = "category";
     }
 
 }
