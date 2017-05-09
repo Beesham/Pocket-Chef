@@ -51,6 +51,13 @@
             android:name=".ui.ViewRecipeActivity"
             android:label="@string/title_activity_browsenewrecipes" >
         </activity>
+
+        <!-- Content Provider -->
+        <provider
+                android:authorities="com.beesham.pocketchef.data.RecipeProvider"
+                android:name=".data.generated.RecipeProvider"
+                android:exported="false"/>
+
     </application>
     
 

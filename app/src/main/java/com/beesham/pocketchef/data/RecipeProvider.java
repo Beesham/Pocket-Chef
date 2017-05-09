@@ -1,15 +1,12 @@
 package com.beesham.pocketchef.data;
 
 import android.net.Uri;
-import android.test.ActivityUnitTestCase;
 
 import net.simonvt.schematic.annotation.ContentProvider;
 import net.simonvt.schematic.annotation.ContentUri;
 import net.simonvt.schematic.annotation.InexactContentUri;
 import net.simonvt.schematic.annotation.TableEndpoint;
 
-import static android.R.attr.name;
-import static android.R.attr.path;
 
 /**
  * Created by Beesham on 5/1/2017.
@@ -42,17 +39,6 @@ public class RecipeProvider {
         public static final Uri CONTENT_URI = buildUri(Path.SAVED_RECIPES);
 
         @InexactContentUri(
-                name = "CATEGORY",
-                path = Path.SAVED_RECIPES + "/*",
-                type = "vnd.android.cursor.dir/saved_recipes",
-                whereColumn = Columns.SavedRecipesColumn.CATEGORY,
-                pathSegment = 1
-        )
-        public static final Uri withCategory(String category){
-            return buildUri(Path.SAVED_RECIPES, category);
-        }
-
-        @InexactContentUri(
                 name = "RECIPE_ID",
                 path = Path.SAVED_RECIPES + "/*",
                 type = "vnd.android.cursor.item/saved_recipes",
@@ -71,17 +57,6 @@ public class RecipeProvider {
                 type = "vdn.android.cursor.dir/searched_recipes"
         )
         public static final Uri CONTENT_URI = buildUri(Path.SEARCHED_RECIPES);
-
-        @InexactContentUri(
-                name = "CATEGORY",
-                path = Path.SAVED_RECIPES + "/*",
-                type = "vnd.android.cursor.dir/saved_recipes",
-                whereColumn = Columns.SavedRecipesColumn.CATEGORY,
-                pathSegment = 1
-        )
-        public static final Uri withCategory(String category){
-            return buildUri(Path.SAVED_RECIPES, category);
-        }
 
         @InexactContentUri(
                 name = "RECIPE_ID",
